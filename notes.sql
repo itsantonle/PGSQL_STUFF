@@ -2,7 +2,7 @@
 -- char a fixed amt of length
 -- text any length
 
--- !! Create syntax
+-- !! Create syntaxa
 -- logic behind creating tables if there's multiple selections or types best for a table
 -- anything that gets in the way of modelling a 'singular object should be put into another table
 
@@ -232,8 +232,36 @@
 -- ! CREATE DATA FROM MULTIPELE TABLE
 -- inner join
 
-select product_id, price from item inner join sales_item on sales_item.item_id = item.id order by product_id desc;
+-- select product_id, price from item inner join sales_item on sales_item.item_id = item.id order by product_id desc;
 
 -- left outer join returns all tables of the left ven wheno no matching example all tasks even those that aren't complete from the left table
 -- show all products even never sold (when traits are optional)
 -- exampel when getting orders if one customer had no orders will not shww in an inner join but will show in left join (customer is left table	)
+
+
+-- using regex
+-- get name that starts with a letter make lower)
+-- use LIKE for wildcards SIMILAR to for cmplex patterns matching like SIMILAR TO '(a|b)%'
+-- select concat(first_name ,' ' , last_name) as customer_name from customer where lower(first_name) similar to 't%';
+
+
+-- using extract, count, groupby and having 
+
+-- select extract(month from birth_date) as  month, count(*) as amount
+-- from customer 
+-- group by month 
+-- having count(*) < 2
+-- order by month;
+
+-- using views to get wanted data and create a view, to display data
+-- every column selected must appear in group by
+-- create view product_name_type as
+-- select product.type_id, product.name, product_type.name as product_name 
+-- from product 
+-- join product_type 
+-- on product_type.id = product.type_id
+-- order by type_id; 
+
+-- views can be used for all function sexpect distint and aggrate
+-- select * from product_name_type;
+-- drop view to drop views
