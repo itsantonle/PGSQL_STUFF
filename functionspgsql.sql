@@ -166,13 +166,7 @@ language plpgsql;
 
 select fn_case_check_amt_state('Allen Edmonds');
 
--- loops
-/*
-LOOP - must have exit condition
-	Statements
-	EXIT WHEN condition is true;
-ENDLOOP;
-*/
+
 
 create or replace function fn_loop_test(max_num int)
 returns int as
@@ -193,13 +187,7 @@ language plpgsql;
 
 select fn_loop_test(5);
 
--- for loop
-/* 
-FOR counter_name IN start_val... end value by stepping
-LOOP
-statements
-end loop
-*/ 
+
 
 
 create or replace function fn_for_test(max_num int)
@@ -240,8 +228,7 @@ $$
 language plpgsql; 
 
 
--- foreach with an array 
--- FOREACH var in  ARRAY array_name
+
 
 do 
 $$
@@ -258,7 +245,7 @@ $$
 $$
 language plpgsql; 
 
--- while loop 
+
 do 
 $$
 	declare

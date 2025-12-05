@@ -1,5 +1,4 @@
---triggers you want sometehing to occur when soemthing occur
--- useful for insert, delete, truncate and shit - triggers cant have params
+
 
 create function trigger_function()
 	returns trigger 
@@ -105,8 +104,7 @@ $$
 create trigger tr_block_weekend_changes
 	before update or insert or delete or truncate
 	on distributor
-	-- when you care about the operation only and not the rows use statement
-	-- fires only once in the query
+	
 	for each statement 
 	when (
 		EXTRACT('DOW' from current_timestamp) between 6 and 7

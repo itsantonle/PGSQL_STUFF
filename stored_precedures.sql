@@ -1,5 +1,3 @@
--- STORED PROCEDURES
--- doesn't return naything
 
 create table past_due(
 	id serial primary key, 
@@ -19,7 +17,7 @@ select * from past_due
 create or replace procedure pr_debt_paid(
 	past_due_id int, 
 	payment numeric
-	inout char  --You pass a value in, and the procedure can modify and return it.
+	inout char  
 ) as
 $$
 	begin
