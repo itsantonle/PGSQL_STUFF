@@ -1,4 +1,4 @@
-<img width="470" height="912" alt="image" src="https://github.com/user-attachments/assets/73da85ae-a540-4fde-9a42-3c0510eb5523" /># PGSql stuff
+# PGSql stuff
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Database-336791?style=for-the-badge&logo=postgresql&logoColor=white)
 ![SQL](https://img.shields.io/badge/SQL-Raw%20Queries-lightgrey?style=for-the-badge&logo=database&logoColor=white)
 ![pgAdmin](https://img.shields.io/badge/pgAdmin-Tool-0064a5?style=for-the-badge&logo=postgresql&logoColor=white)
